@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+  font-size: 32px;
+}
+/* headers */
+body {
+  height: 1200px;
+  background-color: hsl(220, 26%, 27%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label,
+h6 {
+  font-size: 13px;
+  color: hsl(34, 6%, 79%);
+  position: relative;
+  left: 70px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  margin: 50px 0 10px;
+  position: relative;
+}
+
+.header > h1 {
+  color: hsl(30, 10%, 88%);
+  position: absolute;
+  left: -90px;
+  top: -15px;
+}
+
+.header > h6 {
+  align-items: center;
+  margin-top: 10px;
+}
+/* themes */
+.themes {
+  height: 30px;
+  width: 80px;
+  border-radius: 30px;
+  background-color: hsl(221, 17%, 18%);
+  position: relative;
+  left: 90px;
+}
+
+#theme1,
+#theme2,
+#theme3 {
+  appearance: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  top: 7px;
+}
+
+#theme1 {
+  left: 10px;
+}
+
+#theme2 {
+  left: 33px;
+}
+
+#theme3 {
+  left: 55px;
+}
+
+input:checked {
+  background-color: hsl(6, 87%, 43%);
+}
+
+label {
+  top: -40px;
+}
+
+.theme1 {
+  left: 13px;
+}
+
+.theme2 {
+  left: 20px;
+}
+
+.theme3 {
+  left: 26px;
+}
+/* user input */
+.user-input {
+  background-color: hsl(222, 32%, 14%);
+  height: 80px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 10px;
+  color: white;
+  overflow: hidden;
+}
+
+.user-input > .previous-number {
+  font-size: 15px;
+}
+/* calculator itself */
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(5, 70px);
+  background-color: hsl(223, 31%, 20%);
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+.grid-container > button {
+  margin: 0 8px;
+  padding: 8px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  box-shadow: 0 5px hsl(28, 16%, 65%);
+}
+
+button:active {
+  transform: translateY(10px);
+}
+
+.button--reset,
+.button--result {
+  grid-column: span 2;
+}
+
+.grid-container > .button--reset,
+.grid-container > .button--delete {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 5px hsl(224, 28%, 35%);
+  color: hsl(30, 25%, 89%);
+  font-size: 18px;
+  padding: 17px 0;
+}
+
+.grid-container > .button--result {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0 5px hsl(6, 70%, 34%);
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: 11px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .calculator {
+    width: 350px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 82px);
+    grid-template-rows: repeat(5, 65px);
+  }
+
+  .grid-container > button {
+    margin: 0 8px;
+    padding: 5px 0;
+  }
+
+  .grid-container > .button--reset,
+  .grid-container > .button--delete {
+    padding: 13px 0;
+  }
+
+  .themes {
+    height: 30px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: hsl(221, 17%, 18%);
+    position: relative;
+    left: 105px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .calculator {
+    width: 300px;
+  }
+  .user-input {
+    width: 350px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 82px);
+    grid-template-rows: repeat(5, 65px);
+  }
+
+  .grid-container > button {
+    margin: 0 8px;
+    padding: 5px 0;
+  }
+
+  .grid-container > .button--reset,
+  .grid-container > .button--delete {
+    padding: 13px 0;
+  }
+
+  .themes {
+    height: 30px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: hsl(221, 17%, 18%);
+    position: relative;
+    left: 105px;
+  }
+}
