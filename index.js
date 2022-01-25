@@ -1,4 +1,3 @@
-const toggleBtn = document.querySelectorAll('.input')
 const firstNumberText = document.querySelector('.previous-number')
 const currentNumberText = document.querySelector('.current-number')
 const deleteBtn = document.querySelector('.button--delete')
